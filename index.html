@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <form id="f1">
+      <label for="h">height:</label><input type="text" id="h" placeholder="in meters"><br><br>
+      <label for="w">weight:</label><input type="text" id="w" placeholder="in kilograms"><br><br>
+      <input type="button" onclick="bmiCalculator()" value="Calculate">
+      <h1 id="text">Your BMI is :</h1>
+      <h2 id="bmi"></h2>
+    </form>
+    <script>
+    function bmiCalculator(){
+      let height=document.getElementById('h').value;
+      let weight=document.getElementById('w').value;
+      let bmi = (parseFloat(weight))/(parseFloat(height)*parseFloat(height));
+      document.getElementById("bmi").textContent=bmi;}
+    </script>
+  </body>
+</html>
